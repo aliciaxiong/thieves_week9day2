@@ -1,8 +1,6 @@
 import "./Players.css"
 import { useState } from "react"
-import { SlLike } from "react-icons/sl";
 import { FcLike } from "react-icons/fc";
-import { FcDislike } from "react-icons/fc";
 
 
 const Players = () => {
@@ -15,14 +13,17 @@ const Players = () => {
     });
 
     const [count, setLikes] = useState(0);
+    const [isLiked, setLiked] = useState(false)
 
-       const handleClick = () => {
+    const handleClick = () => {
         setPlayer({
             name: "Dak Prescott",
             team: "Cowboys",
             number: 4,
             position: "QB"
-        })
+        });
+        setLikes(0);
+        setLiked(false);
     }
 
     const handleSwitchback = () => {
@@ -33,15 +34,25 @@ const Players = () => {
             position: "QB"
         });
         setLikes(0);
+        setLiked(false);
     }
 
     const handleLike = () => {
-        setLikes(count + 1);
+        if (isLiked) {
+            setLikes(count - 1);
+        } else {
+            setLikes(count + 1);
+        }
+        setLiked(!isLiked);
     };
 
-    const handleDislike = () => {
-        setLikes(count - 1);
-    }
+    // const handleLike = () => {
+    //     setLikes(count + 1);
+    // };
+
+    // const handleDislike = () => {
+    //     setLikes(count - 1);
+    // }
 
   return (
 <>
@@ -65,12 +76,11 @@ const Players = () => {
                         <th>Position: {player.position} </th>
                     </div>
                     <div>
-                        <th><SlLike />: {count} </th>
+                        <th> <FcLike />: {count} </th>
                         </div>
                     <div>
                         <th>
                             <button onClick={handleLike}> <FcLike /> </button>
-                            <button onClick={handleDislike}> <FcDislike /> </button>
                         </th>
 
                         <th>

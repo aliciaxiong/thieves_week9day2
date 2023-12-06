@@ -29,34 +29,4 @@ import "./Players.css"
 
 const Players = () => {
   return (
-<>
-    <header>
-        <h1>2023 NFL MVP!</h1>
-    </header>
-    <div>
-        <body>
-            <table>
-                <tr>
-                    <td>Brock Purdy</td> 
-                    <td>Dak Prescott</td>
-                </tr>
-
-                <tr>
-                    <td>Jalen Hurts</td>
-                    <td>Tyreek Hill</td>
-                </tr>
-
-                <tr>    
-                    <td>Christian McCaffrey</td>
-                    <td>Tua Tagovailoa</td>
-                </tr>     
-
-            </table>
-        </body>
-    </div>
-</>
-    
-  )
-}
-
-export default Players
+)}
