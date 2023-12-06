@@ -1,0 +1,62 @@
+Like Button Exercise
+- Create a Like Component
+- Must use a "react-icon" (heart, thumbs up, etc.)
+- When clicked, log to the console "liked" BUT if it's already liked it should log "unliked"
+- Along with the logs, if "liked" the icon should be "filled", otherwise the icon should be "unfilled".
+
+Updating State Exercise
+- Using the following starter code, update the name of player in the game object "onClick" to anything else.
+Here is your starter code:
+
+const Component = () => {
+    const [game, setGame] = useState({
+        id: 1,
+        player: {
+            name: "Dylan"
+        }
+     })
+
+    const handleClick = () => {
+        // your code here
+    }
+
+    return (
+        // your JSX here
+    )21zw
+}
+
+import "./Players.css"
+
+const Players = () => {
+  return (
+<>
+    <header>
+        <h1>2023 NFL MVP!</h1>
+    </header>
+    <div>
+        <body>
+            <table>
+                <tr>
+                    <td>Brock Purdy</td> 
+                    <td>Dak Prescott</td>
+                </tr>
+
+                <tr>
+                    <td>Jalen Hurts</td>
+                    <td>Tyreek Hill</td>
+                </tr>
+
+                <tr>    
+                    <td>Christian McCaffrey</td>
+                    <td>Tua Tagovailoa</td>
+                </tr>     
+
+            </table>
+        </body>
+    </div>
+</>
+    
+  )
+}
+
+export default Players
